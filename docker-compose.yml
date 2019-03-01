@@ -13,7 +13,7 @@ mariadb:
     environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: dolibarr
-
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
 web:
     build: ./images/$DOLI_VERSION
     environment:
